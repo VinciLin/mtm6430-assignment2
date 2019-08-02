@@ -2,7 +2,7 @@
   <div class="signup" style=" width:40%; margin:0 auto; border: 1px solid #e5e9f2; padding: 30px; margin-top:8%; box-shadow: 13px 13px 26px -12px rgba(0,0,0,0.45);">
     <h1>Sign Up</h1>
     <div>
-    <el-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign">
+    <el-form :label-position="labelPosition" label-width="100px">
     <el-form-item label="NAME">
       <el-input v-model="ruleForm.name"></el-input>
     </el-form-item>

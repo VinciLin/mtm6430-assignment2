@@ -17,13 +17,16 @@
 import { mapState } from "vuex";
 import { mapGetters } from "vuex";
 
+
+
 export default {
   data() {
     return {
       userData: {
       name: '',
       email: ''
-    }
+    },
+    
     }  
   },
   
@@ -36,14 +39,15 @@ export default {
   },
 
   mounted() {
+    
   if (localStorage.getItem("name")) {
-    this.name = localStorage.ruleForm.name;
+    this.userData.name = localStorage.ruleForm.name;
   }
   if (localStorage.getItem("email")){
-    this.email = localStorage.ruleForm.email;
+    this.userData.email = localStorage.ruleForm.email;
   }
   if (localStorage.getItem("password")){
-    this.password = localStorage.ruleForm.password;
+    this.userData.password = localStorage.ruleForm.password;
   }
 },
 
@@ -53,6 +57,9 @@ export default {
         localStorage.removeItem("name");
         localStorage.removeItem("email");
         localStorage.removeItem("password");
+
+        this.userData.name = "",
+        this.userData.email = ""
       
     }
   }
@@ -75,3 +82,4 @@ export default {
      text-align: center;
   }
 </style>
+
